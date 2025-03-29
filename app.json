@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/level/level",
+    "pages/game/game",
+    "pages/result/result",
+    "pages/add_words/add_words"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "知识消消乐",
+    "backgroundColor": "#eeeeee"
+  }
+}

@@ -1,0 +1,53 @@
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.add-button {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.scoreboard {
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.score-item {
+  padding: 6px 0;
+  border-bottom: 1px solid #ccc;
+}

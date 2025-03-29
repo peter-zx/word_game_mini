@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="title">游戏结束</view>
+
+  <view class="score">你的分数: {{score}} 分</view>
+
+  <view class="buttons">
+    <button bindtap="goHome">回到主页</button>
+    <button bindtap="nextLevel">下一关</button>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="title">添加单词库</view>
+
+  <textarea class="input-area"
+            placeholder="格式: english,chinese,L1\n例如: apple,苹果,L1"
+            auto-height
+            value="{{inputText}}"
+            bindinput="onInput" />
+
+  <button bindtap="submitWords">添加到词库</button>
+  <button bindtap="goHome">返回主页</button>
+</view>

@@ -1,0 +1,45 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+
+.info {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.cell {
+  background-color: #f0f0f0;
+  border: 1px solid #999;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.cell.selected {
+  background-color: #ffd700;
+}
+
+.cell.matched {
+  background-color: #a9a9a9;
+}
+
+.cell.wrong {
+  background-color: #ff4040;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+}

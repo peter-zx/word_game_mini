@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="title">知识消消乐</view>
+
+  <view class="subtitle">选择模式</view>
+  <view class="mode-grid">
+    <button bindtap="chooseMode" data-mode="65">65秒</button>
+    <button bindtap="chooseMode" data-mode="125">125秒</button>
+    <button bindtap="chooseMode" data-mode="180">180秒</button>
+    <button bindtap="chooseMode" data-mode="endless">无尽模式</button>
+  </view>
+
+  <button class="add-button" bindtap="goToAddWords">添加单词库</button>
+
+  <view class="scoreboard">
+    <view class="subtitle">排行榜</view>
+    <block wx:for="{{scores}}" wx:key="index">
+      <view class="score-item">
+        难度 {{item.level.toUpperCase()}} | {{item.time_mode === 'endless' ? '无尽' : item.time_mode + '秒'}} | {{item.score}} 分
+      </view>
+    </block>
+  </view>
+</view>

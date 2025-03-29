@@ -2,6 +2,9 @@
   "appid": "wxbcd5010c08c6c52a",
   "compileType": "miniprogram",
   "libVersion": "3.7.12",
+  "miniprogramRoot": "",
+  "projectname": "word_game_mini",
+  "description": "知识消消乐小程序",
   "packOptions": {
     "ignore": [],
     "include": []

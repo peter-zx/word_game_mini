@@ -1,12 +1,60 @@
 
+
+
 小程序中的页面结构是「一个页面 = 一个文件夹 + 三个核心文件」
+
 ```
+以下是我们要“翻译”为小程序 JS 的源文件，你可以直接复制粘贴给我，我来逐个改写：
+
+原文件	作用	说明
+static/index.html	前端 UI	我会拆成 index.wxml + index.wxss + index.js
+api/game.py	游戏逻辑（出题、检查匹配）	重写为 pages/game/game.js
+api/scores.py	保存分数 / 排行榜	重写为 utils/score_manager.js
+api/words.py	加载词库 / 添加单词	重写为 utils/word_manager.js
+data/default_words.csv	默认词库	我会转为 data/default_words.js
+data/scores.json	分数记录	模拟成小程序本地缓存（使用 wx API）
+
+
 pages/
 ├── index/
 │   ├── index.wxml      ← 页面结构（类似 HTML）
 │   ├── index.wxss      ← 页面样式（类似 CSS）
 │   ├── index.js        ← 页面逻辑（类似 JS 交互）
 │   └── index.json      ← 页面配置（可选）
+
+
+🧠 一句话总结：
+微信小程序是一个运行在微信内部的“小网页” + “小逻辑系统”，它的代码会在 用户手机上的微信环境中被执行，就像一个独立的 App！
+
+✅ 微信小程序是怎么运作的？
+微信小程序运行时，有两个“世界”在协作：
+
+1️⃣ 前端逻辑 —— 在 用户手机微信里运行
+你写的 .wxml（结构） .wxss（样式） .js（逻辑） 文件
+
+全部被微信小程序的运行引擎解析
+
+就像你写 HTML+JS 的网页，但运行在微信的“浏览器容器”中
+
+这个引擎是微信官方定制的 JavaScript 虚拟机（非浏览器、非 Node.js）
+
+2️⃣ 后端处理 —— 你可以：
+✅（A）不需要后端（我们现在选的方案一）
+词库、题目、得分全部用小程序本地 JS 逻辑处理
+
+存储用微信 API（如 wx.setStorageSync）代替数据库
+
+没有 Flask、没有服务器
+
+✅（B）用微信云开发当后端（后期你可以加）
+微信提供了云函数 + 云数据库
+
+你可以写 JS 当后端函数运行在云端（它支持 node.js 环境）
+
+✅（C）用你自己的服务器当后端（备用方案）
+把 Flask 部署到云端，开放接口
+
+小程序通过 wx.request 调用你的 API
 
 ```
 

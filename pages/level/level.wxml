@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="title">选择难度</view>
+
+  <view class="level-grid">
+    <button wx:for="{{levels}}" wx:key="index"
+            data-level="{{item}}"
+            bindtap="startGame">
+      {{item.toUpperCase()}}
+    </button>
+  </view>
+
+  <button class="back-btn" bindtap="goBack">返回</button>
+</view>
