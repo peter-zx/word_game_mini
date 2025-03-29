@@ -1,6 +1,6 @@
 Page({
   data: {
-    levels: ['lv1', 'lv2', 'lv3', 'lv4', 'lv5', 'lv6'],
+    levels: ['Lv1', 'Lv2', 'Lv3', 'Lv4', 'Lv5', 'Lv6'],
     mode: '65'  // 默认时间模式
   },
 

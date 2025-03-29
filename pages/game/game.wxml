@@ -13,6 +13,7 @@
     </block>
   </view>
 
+
   <view class="buttons">
     <button bindtap="nextGroup">下一组</button>
     <button bindtap="goBack">返回</button>
